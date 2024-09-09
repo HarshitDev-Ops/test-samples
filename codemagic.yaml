@@ -30,8 +30,6 @@ workflows:
       #     agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
       - name: Build ipa for distribution
         script: |
-          echo "hello ipa"
-        script: |
           xcodebuild -workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
           -scheme "$XCODE_SCHEME"
         # script: |
